@@ -25,9 +25,13 @@
 <strong>Due Date!</strong> <h5><p>{{$task->due}}</p></h5>
 </div>
 <br>
-<div class="alert alert-warning">
-<strong>Created Date</strong> <p>{{$task->created_at}}</p>
-</div>
+
+<a href="/tasks/{{$task->id}}/edit" class="btn btn-info float-left" role="button">Update</a>
+{!! Form::open(['action' => ['TaskController@destroy' , $task->id] , 'method' =>'POST']) !!}
+    {{ Form::hidden('_method' , 'DELETE')}}
+    {{ Form::submit('Removed' , ['class'=>'btn btn-danger float-right']) }}
+{!! Form::close() !!}
+
 </div>
 </div>
 </div>

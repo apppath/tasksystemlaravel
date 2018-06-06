@@ -4,13 +4,8 @@
 <br>
 @include('inc.messages')
 <div class="row">
-<div class="col-md-9 col-lg-9">
+<div class="col-md-12 col-lg-12">
 @yield('content')
-</div>
-
-<div class="col-md-3 col-lg-3">
-<br>
-@include('inc.sidebar')
 </div>
 
 </div>
